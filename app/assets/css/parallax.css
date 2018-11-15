@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    background-color: #bfbfbf;
+    color: #fff;
+    font-size: 120px;
+    font-family: 'Arial';
+
+}
+::selection{
+    background-color: tomato;
+}
+
+section{
+    position: relative;
+    height: 100vh;
+    -webkit-background-size: cover!important;
+    background-size: cover!important;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    letter-spacing: 15px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+section:nth-of-type(1){
+    background: url(https://cyrillitsa.ru/wp-content/uploads/2017/08/Griby-1.jpg)0 0 no-repeat;
+    z-index: 0;
+}
+section:nth-of-type(1):before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+section:nth-of-type(2){
+    background: url(https://www.nastol.com.ua/pic/201603/1920x1080/nastol.com.ua-169549.jpg)0 0 no-repeat;
+}
+section:nth-of-type(3){
+    background: url(https://www.nastol.com.ua/pic/201409/1920x1080/nastol.com.ua-111589.jpg)0 0 no-repeat;
+}
+.header{
+    width: 100%;
+    text-align: center;
+    filter: blur(80px);
+    font-size: 340px;
+
+}
+.subheader{
+    font-size: 60px;
+    font-weight: 100;
+}
+.mob-button{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    right: 50px;
+    z-index: 100;
+    cursor: pointer;
+
+}
+.mob-button.open span{
+    width: 5px;
+    transition: all ease 0.3s;
+}
+
+.mob-button span{
+    width: 100%;
+    height: 5px;
+    display: block;
+    background-color: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    transition: all ease 0.3s;
+}
+.mob-button span:nth-of-type(2){
+    width: 90%;
+}
+.mob-button span:nth-of-type(3){
+    margin-bottom: 0;
+}
+.menu-wraper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 0.3s;
+}
+.menu-wraper.active{
+    opacity: 1;
+    visibility: visible;
+    transition: all ease 0.3s;
+}
+.menu-element{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all ease 1s;
+}
+.menu-element.active{
+    transform: scaleX(-1);
+    height: 100%!important;
+    transition: all ease 1s;
+}
+.menu-element:hover{
+    transform: scaleX(1);
+    transition: all ease 1s;
+}

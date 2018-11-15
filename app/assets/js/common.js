@@ -5,9 +5,9 @@ var ctx = c.getContext("2d");
 c.height = window.innerHeight;
 c.width = window.innerWidth;
 
-//chinese characters - taken from the unicode charset
-/*var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";*/
-var chinese = "帰路は孤独なものになるはずだった";
+//japanise characters - taken from the unicode charset
+
+var chinese = "社は現在、世界中の主要な金融センターに事務所をЌえており、お客様には24時間体制で世界40ヶ所を越える市場での取引にアクセスいただけます。";
 //converting the string into an array of single characters
 chinese = chinese.split("");
 
@@ -48,7 +48,7 @@ function draw()
     }
 }
 
-setInterval(draw, 53);
+setInterval(draw, 50);
 
 
 
